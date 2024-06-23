@@ -1,15 +1,20 @@
-import { Box, Heading, Text, FormControl, FormLabel, Input, Button, Select } from "@chakra-ui/react";
+import { Box, Heading, Text, FormControl, FormLabel, Input, Button, Select, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 
 const Admin = () => {
   const [storeName, setStoreName] = useState("");
   const [industry, setIndustry] = useState("");
+  const [stores, setStores] = useState([]);
+  const [industries, setIndustries] = useState(["Cabaret Club", "Lounge", "Girls Bar", "Delivery Health", "Soapland", "Men's Esthetic", "Pink Salon"]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Logic to handle form submission, e.g., sending data to an API
     console.log("Store Name:", storeName);
     console.log("Industry:", industry);
+    setStores([...stores, { name: storeName, industry }]);
+    setStoreName("");
+    setIndustry("");
   };
 
   return (
@@ -34,19 +39,26 @@ const Admin = () => {
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
             >
-              <option value="Cabaret Club">Cabaret Club</option>
-              <option value="Lounge">Lounge</option>
-              <option value="Girls Bar">Girls Bar</option>
-              <option value="Delivery Health">Delivery Health</option>
-              <option value="Soapland">Soapland</option>
-              <option value="Men's Esthetic">Men's Esthetic</option>
-              <option value="Pink Salon">Pink Salon</option>
+              {industries.map((ind, index) => (
+                <option key={index} value={ind}>{ind}</option>
+              ))}
             </Select>
           </FormControl>
           <Button mt={4} colorScheme="teal" type="submit">
             Add Store
           </Button>
         </form>
+      </Box>
+      <Box mt={8}>
+        <Heading size="md">Store List</Heading>
+        <VStack spacing={4} align="stretch">
+          {stores.map((store, index) => (
+            <Box key={index} p={4} borderWidth="1px" borderRadius="lg">
+              <Text><strong>Store Name:</strong> {store.name}</Text>
+              <Text><strong>Industry:</strong> {store.industry}</Text>
+            </Box>
+          ))}
+        </VStack>
       </Box>
     </Box>
   );
