@@ -1,15 +1,15 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
-import CabaretClub from "./pages/CabaretClub.jsx";
-import Lounge from "./pages/Lounge.jsx";
-import GirlsBar from "./pages/GirlsBar.jsx";
-import DeliveryHealth from "./pages/DeliveryHealth.jsx";
-import Soapland from "./pages/Soapland.jsx";
-import MensEsthetic from "./pages/MensEsthetic.jsx";
-import PinkSalon from "./pages/PinkSalon.jsx";
-import NewPost from "./pages/NewPost.jsx";
-import UserProfile from "./pages/UserProfile.jsx";
-import Admin from "./pages/Admin.jsx";
+import CabaretClub from "./pages/キャバクラ.jsx";
+import Lounge from "./pages/ラウンジ.jsx";
+import GirlsBar from "./pages/ガールズバー.jsx";
+import DeliveryHealth from "./pages/デリヘル.jsx";
+import Soapland from "./pages/ソープ.jsx";
+import MensEsthetic from "./pages/メンズエステ.jsx";
+import PinkSalon from "./pages/ピンサロ.jsx";
+import NewPost from "./pages/新規投稿.jsx";
+import UserProfile from "./pages/ユーザープロフィール.jsx";
+import Admin from "./pages/管理者.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 function App() {
@@ -18,16 +18,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route exact path="/cabaret-club" element={<CabaretClub />} />
-        <Route exact path="/lounge" element={<Lounge />} />
-        <Route exact path="/girls-bar" element={<GirlsBar />} />
-        <Route exact path="/delivery-health" element={<DeliveryHealth />} />
-        <Route exact path="/soapland" element={<Soapland />} />
-        <Route exact path="/mens-esthetic" element={<MensEsthetic />} />
-        <Route exact path="/pink-salon" element={<PinkSalon />} />
-        <Route exact path="/new-post" element={<NewPost />} />
-        <Route exact path="/user-profile" element={<UserProfile />} />
-        <Route exact path="/admin" element={<Admin />} />
+        <Route exact path="/キャバクラ" element={<CabaretClub />} />
+        <Route exact path="/ラウンジ" element={<Lounge />} />
+        <Route exact path="/ガールズバー" element={<GirlsBar />} />
+        <Route exact path="/デリヘル" element={<DeliveryHealth />} />
+        <Route exact path="/ソープ" element={<Soapland />} />
+        <Route exact path="/メンズエステ" element={<MensEsthetic />} />
+        <Route exact path="/ピンサロ" element={<PinkSalon />} />
+        <Route exact path="/新規投稿" element={<NewPost />} />
+        <Route exact path="/ユーザープロフィール" element={<UserProfile />} />
+        <Route exact path="/管理者" element={<Admin />} />
       </Routes>
     </Router>
   );

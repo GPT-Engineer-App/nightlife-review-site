@@ -5,7 +5,7 @@ const Admin = () => {
   const [storeName, setStoreName] = useState("");
   const [industry, setIndustry] = useState("");
   const [stores, setStores] = useState([]);
-  const [industries, setIndustries] = useState(["Cabaret Club", "Lounge", "Girls Bar", "Delivery Health", "Soapland", "Men's Esthetic", "Pink Salon"]);
+  const [industries, setIndustries] = useState(["キャバクラ", "ラウンジ", "ガールズバー", "デリヘル", "ソープ", "メンズエステ", "ピンサロ"]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,13 +19,13 @@ const Admin = () => {
 
   return (
     <Box p={4}>
-      <Heading>Admin Page</Heading>
-      <Text>Manage posts, store information, and users.</Text>
+      <Heading>管理者ページ</Heading>
+      <Text>投稿、店舗情報、ユーザーを管理する。</Text>
       <Box mt={8}>
-        <Heading size="md">Add Store</Heading>
+        <Heading size="md">店舗を追加</Heading>
         <form onSubmit={handleSubmit}>
           <FormControl id="storeName" isRequired mt={4}>
-            <FormLabel>Store Name</FormLabel>
+            <FormLabel>店舗名</FormLabel>
             <Input
               type="text"
               value={storeName}
@@ -33,9 +33,9 @@ const Admin = () => {
             />
           </FormControl>
           <FormControl id="industry" isRequired mt={4}>
-            <FormLabel>Industry</FormLabel>
+            <FormLabel>業界</FormLabel>
             <Select
-              placeholder="Select industry"
+              placeholder="業界を選択"
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
             >
@@ -45,17 +45,17 @@ const Admin = () => {
             </Select>
           </FormControl>
           <Button mt={4} colorScheme="teal" type="submit">
-            Add Store
+            店舗を追加
           </Button>
         </form>
       </Box>
       <Box mt={8}>
-        <Heading size="md">Store List</Heading>
+        <Heading size="md">店舗リスト</Heading>
         <VStack spacing={4} align="stretch">
           {stores.map((store, index) => (
             <Box key={index} p={4} borderWidth="1px" borderRadius="lg">
-              <Text><strong>Store Name:</strong> {store.name}</Text>
-              <Text><strong>Industry:</strong> {store.industry}</Text>
+              <Text><strong>店舗名:</strong> {store.name}</Text>
+              <Text><strong>業界:</strong> {store.industry}</Text>
             </Box>
           ))}
         </VStack>
