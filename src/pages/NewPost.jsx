@@ -44,61 +44,6 @@ const NewPost = () => {
     <Box p={4}>
       <Heading>New Post</Heading>
       <form onSubmit={handleSubmit}>
-        <FormControl id="content" isRequired mt={4}>
-          <FormLabel>Content</FormLabel>
-          <Textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="spec" isRequired mt={4}>
-          <FormLabel>スペック (Spec)</FormLabel>
-          <Input
-            type="text"
-            value={spec}
-            onChange={(e) => setSpec(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="hourlyWage" isRequired mt={4}>
-          <FormLabel>時給 (Hourly Wage)</FormLabel>
-          <Input
-            type="text"
-            value={hourlyWage}
-            onChange={(e) => setHourlyWage(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="totalPayment" isRequired mt={4}>
-          <FormLabel>総支給 (Total Payment)</FormLabel>
-          <Input
-            type="text"
-            value={totalPayment}
-            onChange={(e) => setTotalPayment(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="backPull" isRequired mt={4}>
-          <FormLabel>裏引 (Back Pull)</FormLabel>
-          <Input
-            type="text"
-            value={backPull}
-            onChange={(e) => setBackPull(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="guarantee" isRequired mt={4}>
-          <FormLabel>保証 (Guarantee)</FormLabel>
-          <Input
-            type="text"
-            value={guarantee}
-            onChange={(e) => setGuarantee(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="period" isRequired mt={4}>
-          <FormLabel>期間 (Period)</FormLabel>
-          <Input
-            type="text"
-            value={period}
-            onChange={(e) => setPeriod(e.target.value)}
-          />
-        </FormControl>
         <FormControl id="industry" isRequired mt={4}>
           <FormLabel>Industry</FormLabel>
           <Select
@@ -122,6 +67,61 @@ const NewPost = () => {
               <option key={index} value={store}>{store}</option>
             ))}
           </Select>
+        </FormControl>
+        <FormControl id="totalPayment" isRequired mt={4}>
+          <FormLabel>総支給 (Total Payment)</FormLabel>
+          <Input
+            type="text"
+            value={totalPayment}
+            onChange={(e) => setTotalPayment(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="hourlyWage" isRequired mt={4}>
+          <FormLabel>時給 (Hourly Wage)</FormLabel>
+          <Input
+            type="text"
+            value={hourlyWage}
+            onChange={(e) => setHourlyWage(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="guarantee" isRequired mt={4}>
+          <FormLabel>保証 (Guarantee)</FormLabel>
+          <Input
+            type="text"
+            value={guarantee}
+            onChange={(e) => setGuarantee(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="spec" isRequired mt={4}>
+          <FormLabel>スペック (Spec)</FormLabel>
+          <Input
+            type="text"
+            value={spec}
+            onChange={(e) => setSpec(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="backPull" isRequired mt={4}>
+          <FormLabel>裏引 (Back Pull)</FormLabel>
+          <Input
+            type="text"
+            value={backPull}
+            onChange={(e) => setBackPull(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="period" isRequired mt={4}>
+          <FormLabel>期間 (Period)</FormLabel>
+          <Input
+            type="text"
+            value={period}
+            onChange={(e) => setPeriod(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="content" isRequired mt={4}>
+          <FormLabel>Content</FormLabel>
+          <Textarea
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
         </FormControl>
         <Button mt={4} colorScheme="teal" type="submit">
           Submit
