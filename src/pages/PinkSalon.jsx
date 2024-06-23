@@ -2,8 +2,8 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 
 const PinkSalon = () => (
   <Box p={4}>
-    <Heading>Pink Salon</Heading>
-    <Text>Reviews and ratings for Pink Salons.</Text>
+    <Heading>ピンサロ</Heading>
+    <Text>ピンサロのレビューと評価。</Text>
   </Box>
 );
 

@@ -18,7 +18,7 @@ const NewPost = () => {
     // Mock API call to fetch industries and stores
     const fetchIndustriesAndStores = async () => {
       const industriesData = ["キャバクラ", "ラウンジ", "ガールズバー", "デリヘル", "ソープ", "メンズエステ", "ピンサロ"];
-      const storesData = ["Store A", "Store B", "Store C"];
+      const storesData = ["店舗A", "店舗B", "店舗C"];
       setIndustries(industriesData);
       setStores(storesData);
     };

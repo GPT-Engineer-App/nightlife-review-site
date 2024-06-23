@@ -4,19 +4,19 @@ import { Link as RouterLink } from "react-router-dom";
 const Navbar = () => (
   <Box bg="gray.800" color="white" px={4}>
     <Flex h={16} alignItems="center" justifyContent="space-between">
-      <Box>Nightlife Reviews</Box>
+      <Box>ナイトライフレビュー</Box>
       <Flex alignItems="center">
-        <RouterLink to="/"><Link px={2}>Home</Link></RouterLink>
-        <RouterLink to="/cabaret-club"><Link px={2}>Cabaret Club</Link></RouterLink>
-        <RouterLink to="/lounge"><Link px={2}>Lounge</Link></RouterLink>
-        <RouterLink to="/girls-bar"><Link px={2}>Girls Bar</Link></RouterLink>
-        <RouterLink to="/delivery-health"><Link px={2}>Delivery Health</Link></RouterLink>
-        <RouterLink to="/soapland"><Link px={2}>Soapland</Link></RouterLink>
-        <RouterLink to="/mens-esthetic"><Link px={2}>Men's Esthetic</Link></RouterLink>
-        <RouterLink to="/pink-salon"><Link px={2}>Pink Salon</Link></RouterLink>
-        <RouterLink to="/new-post"><Link px={2}>New Post</Link></RouterLink>
-        <RouterLink to="/user-profile"><Link px={2}>User Profile</Link></RouterLink>
-        <RouterLink to="/admin"><Link px={2}>Admin</Link></RouterLink>
+        <RouterLink to="/"><Link px={2}>ホーム</Link></RouterLink>
+        <RouterLink to="/キャバクラ"><Link px={2}>キャバクラ</Link></RouterLink>
+        <RouterLink to="/ラウンジ"><Link px={2}>ラウンジ</Link></RouterLink>
+        <RouterLink to="/ガールズバー"><Link px={2}>ガールズバー</Link></RouterLink>
+        <RouterLink to="/デリヘル"><Link px={2}>デリヘル</Link></RouterLink>
+        <RouterLink to="/ソープ"><Link px={2}>ソープ</Link></RouterLink>
+        <RouterLink to="/メンズエステ"><Link px={2}>メンズエステ</Link></RouterLink>
+        <RouterLink to="/ピンサロ"><Link px={2}>ピンサロ</Link></RouterLink>
+        <RouterLink to="/新規投稿"><Link px={2}>新規投稿</Link></RouterLink>
+        <RouterLink to="/ユーザープロフィール"><Link px={2}>ユーザープロフィール</Link></RouterLink>
+        <RouterLink to="/管理者"><Link px={2}>管理者</Link></RouterLink>
       </Flex>
     </Flex>
   </Box>
