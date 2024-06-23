@@ -76,7 +76,7 @@ const NewPost = () => {
             onChange={(e) => setTotalPayment(e.target.value)}
           />
         </FormControl>
-        <FormControl id="hourlyWage" isRequired mt={4}>
+        <FormControl id="hourlyWage" mt={4}>
           <FormLabel>時給</FormLabel>
           <Input
             type="text"
@@ -84,7 +84,7 @@ const NewPost = () => {
             onChange={(e) => setHourlyWage(e.target.value)}
           />
         </FormControl>
-        <FormControl id="guarantee" isRequired mt={4}>
+        <FormControl id="guarantee" mt={4}>
           <FormLabel>保証</FormLabel>
           <Input
             type="text"
@@ -92,7 +92,7 @@ const NewPost = () => {
             onChange={(e) => setGuarantee(e.target.value)}
           />
         </FormControl>
-        <FormControl id="spec" isRequired mt={4}>
+        <FormControl id="spec" mt={4}>
           <FormLabel>スペック</FormLabel>
           <Input
             type="text"
@@ -100,7 +100,7 @@ const NewPost = () => {
             onChange={(e) => setSpec(e.target.value)}
           />
         </FormControl>
-        <FormControl id="backPull" isRequired mt={4}>
+        <FormControl id="backPull" mt={4}>
           <FormLabel>裏引</FormLabel>
           <Input
             type="text"
@@ -108,7 +108,7 @@ const NewPost = () => {
             onChange={(e) => setBackPull(e.target.value)}
           />
         </FormControl>
-        <FormControl id="period" isRequired mt={4}>
+        <FormControl id="period" mt={4}>
           <FormLabel>期間</FormLabel>
           <Input
             type="text"
@@ -116,7 +116,7 @@ const NewPost = () => {
             onChange={(e) => setPeriod(e.target.value)}
           />
         </FormControl>
-        <FormControl id="content" isRequired mt={4}>
+        <FormControl id="content" mt={4}>
           <FormLabel>内容</FormLabel>
           <Textarea
             value={content}
