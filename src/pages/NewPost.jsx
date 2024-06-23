@@ -17,7 +17,7 @@ const NewPost = () => {
   useEffect(() => {
     // Mock API call to fetch industries and stores
     const fetchIndustriesAndStores = async () => {
-      const industriesData = ["Cabaret Club", "Lounge", "Girls Bar", "Delivery Health", "Soapland", "Men's Esthetic", "Pink Salon"];
+      const industriesData = ["キャバクラ", "ラウンジ", "ガールズバー", "デリヘル", "ソープ", "メンズエステ", "ピンサロ"];
       const storesData = ["Store A", "Store B", "Store C"];
       setIndustries(industriesData);
       setStores(storesData);
@@ -42,12 +42,12 @@ const NewPost = () => {
 
   return (
     <Box p={4}>
-      <Heading>New Post</Heading>
+      <Heading>新規投稿</Heading>
       <form onSubmit={handleSubmit}>
         <FormControl id="industry" isRequired mt={4}>
-          <FormLabel>Industry</FormLabel>
+          <FormLabel>業界</FormLabel>
           <Select
-            placeholder="Select industry"
+            placeholder="業界を選択"
             value={industry}
             onChange={(e) => setIndustry(e.target.value)}
           >
@@ -57,9 +57,9 @@ const NewPost = () => {
           </Select>
         </FormControl>
         <FormControl id="storeName" isRequired mt={4}>
-          <FormLabel>Store Name</FormLabel>
+          <FormLabel>店舗名</FormLabel>
           <Select
-            placeholder="Select store"
+            placeholder="店舗を選択"
             value={storeName}
             onChange={(e) => setStoreName(e.target.value)}
           >
@@ -69,7 +69,7 @@ const NewPost = () => {
           </Select>
         </FormControl>
         <FormControl id="totalPayment" isRequired mt={4}>
-          <FormLabel>総支給 (Total Payment)</FormLabel>
+          <FormLabel>総支給</FormLabel>
           <Input
             type="text"
             value={totalPayment}
@@ -77,7 +77,7 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="hourlyWage" isRequired mt={4}>
-          <FormLabel>時給 (Hourly Wage)</FormLabel>
+          <FormLabel>時給</FormLabel>
           <Input
             type="text"
             value={hourlyWage}
@@ -85,7 +85,7 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="guarantee" isRequired mt={4}>
-          <FormLabel>保証 (Guarantee)</FormLabel>
+          <FormLabel>保証</FormLabel>
           <Input
             type="text"
             value={guarantee}
@@ -93,7 +93,7 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="spec" isRequired mt={4}>
-          <FormLabel>スペック (Spec)</FormLabel>
+          <FormLabel>スペック</FormLabel>
           <Input
             type="text"
             value={spec}
@@ -101,7 +101,7 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="backPull" isRequired mt={4}>
-          <FormLabel>裏引 (Back Pull)</FormLabel>
+          <FormLabel>裏引</FormLabel>
           <Input
             type="text"
             value={backPull}
@@ -109,7 +109,7 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="period" isRequired mt={4}>
-          <FormLabel>期間 (Period)</FormLabel>
+          <FormLabel>期間</FormLabel>
           <Input
             type="text"
             value={period}
@@ -117,14 +117,14 @@ const NewPost = () => {
           />
         </FormControl>
         <FormControl id="content" isRequired mt={4}>
-          <FormLabel>Content</FormLabel>
+          <FormLabel>内容</FormLabel>
           <Textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
         </FormControl>
         <Button mt={4} colorScheme="teal" type="submit">
-          Submit
+          送信
         </Button>
       </form>
     </Box>
