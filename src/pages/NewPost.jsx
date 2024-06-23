@@ -2,7 +2,6 @@ import { Box, Heading, Text, FormControl, FormLabel, Input, Textarea, Button, Se
 import { useState, useEffect } from "react";
 
 const NewPost = () => {
-  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [spec, setSpec] = useState("");
   const [hourlyWage, setHourlyWage] = useState("");
@@ -30,7 +29,6 @@ const NewPost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Logic to handle form submission, e.g., sending data to an API
-    console.log("Title:", title);
     console.log("Content:", content);
     console.log("Spec:", spec);
     console.log("Hourly Wage:", hourlyWage);
@@ -46,14 +44,6 @@ const NewPost = () => {
     <Box p={4}>
       <Heading>New Post</Heading>
       <form onSubmit={handleSubmit}>
-        <FormControl id="title" isRequired>
-          <FormLabel>Title</FormLabel>
-          <Input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </FormControl>
         <FormControl id="content" isRequired mt={4}>
           <FormLabel>Content</FormLabel>
           <Textarea
