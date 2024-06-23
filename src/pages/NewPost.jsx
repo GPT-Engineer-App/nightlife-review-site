@@ -1,5 +1,5 @@
-import { Box, Heading, Text, FormControl, FormLabel, Input, Textarea, Button } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box, Heading, Text, FormControl, FormLabel, Input, Textarea, Button, Select } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 
 const NewPost = () => {
   const [title, setTitle] = useState("");
@@ -10,6 +10,22 @@ const NewPost = () => {
   const [backPull, setBackPull] = useState("");
   const [guarantee, setGuarantee] = useState("");
   const [period, setPeriod] = useState("");
+  const [industry, setIndustry] = useState("");
+  const [storeName, setStoreName] = useState("");
+  const [industries, setIndustries] = useState([]);
+  const [stores, setStores] = useState([]);
+
+  useEffect(() => {
+    // Mock API call to fetch industries and stores
+    const fetchIndustriesAndStores = async () => {
+      const industriesData = ["Cabaret Club", "Lounge", "Girls Bar", "Delivery Health", "Soapland", "Men's Esthetic", "Pink Salon"];
+      const storesData = ["Store A", "Store B", "Store C"];
+      setIndustries(industriesData);
+      setStores(storesData);
+    };
+
+    fetchIndustriesAndStores();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +38,8 @@ const NewPost = () => {
     console.log("Back Pull:", backPull);
     console.log("Guarantee:", guarantee);
     console.log("Period:", period);
+    console.log("Industry:", industry);
+    console.log("Store Name:", storeName);
   };
 
   return (
@@ -90,6 +108,30 @@ const NewPost = () => {
             value={period}
             onChange={(e) => setPeriod(e.target.value)}
           />
+        </FormControl>
+        <FormControl id="industry" isRequired mt={4}>
+          <FormLabel>Industry</FormLabel>
+          <Select
+            placeholder="Select industry"
+            value={industry}
+            onChange={(e) => setIndustry(e.target.value)}
+          >
+            {industries.map((ind, index) => (
+              <option key={index} value={ind}>{ind}</option>
+            ))}
+          </Select>
+        </FormControl>
+        <FormControl id="storeName" isRequired mt={4}>
+          <FormLabel>Store Name</FormLabel>
+          <Select
+            placeholder="Select store"
+            value={storeName}
+            onChange={(e) => setStoreName(e.target.value)}
+          >
+            {stores.map((store, index) => (
+              <option key={index} value={store}>{store}</option>
+            ))}
+          </Select>
         </FormControl>
         <Button mt={4} colorScheme="teal" type="submit">
           Submit
